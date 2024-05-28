@@ -57,12 +57,12 @@
                       <span class="menu-title">Users</span>
                   </a>
               </li> 
-              <!-- <li class="nav-item">
-                  <a class="nav-link" href="../userlog/userlog.php">
+               <li class="nav-item">
+                  <a class="nav-link" href="../marketplace/marketplace.php">
                       <i class="ti-user menu-icon"></i>
-                      <span class="menu-title">User Log</span>
+                      <span class="menu-title">Marketplace</span>
                   </a>
-              </li> -->
+              </li> 
              <!-- <li class="nav-item">
                   <a class="nav-link" href="../auditlog/auditlog.php">
                       <i class="ti-time menu-icon"></i>

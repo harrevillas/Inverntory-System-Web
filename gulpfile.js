@@ -174,3 +174,7 @@ gulp.task('copyMapFiles', function() {
 gulp.task('bundleVendors', gulp.series('clean:vendors', 'buildBaseVendorStyles','buildBaseVendorScripts','copyRecursiveVendorFiles','copyMapFiles'));
 
 gulp.task('default', gulp.series('serve'));
+
+exports.default = series(scssTask, jsTask, browserSyncServe, watchTask);
+
+exports.build = series(scssTask, jsTask);

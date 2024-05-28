@@ -1257,12 +1257,12 @@
               </div>
         </div>
     </div>
-<!-- /add product set -->
-<div class="modal fade" id="add-ProductSet">
+ <!--/add api -->
+ <div class="modal fade" id="add_Api">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">Add Product Set</h4>
+                <h4 class="modal-title">Add API</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -1270,31 +1270,88 @@
             <div class="modal-body">
                 <form role="form">
                     <div class="card-body">
-                        <div id="mgs_pset"></div>
-                        <div id="reqPc"></div>
+                        <div id="mgs_Api"></div>
+                        <div id="reqApi"></div>
                         <div class="row">
                         <div class="form-group col-md-12">
-                            <label for="Set Code">Set Code</label>
-                            <input type="text" class="form-control" id="set_code" placeholder="Set Code">
+                            <label for="apiUrl">API URL</label>
+                            <input type="text" class="form-control" id="apiUrl" placeholder="API URL">
                         </div>
                             <div class="form-group col-md-12">
-                            <label for="Set Name">Set Name</label>
-                            <input type="text" class="form-control" id="set_name" placeholder="Set Name">
+                            <label for="apiKey">API Key</label>
+                            <input type="text" class="form-control" id="apiKey" placeholder="API Key">
                         </div>
                             <div class="form-group col-md-12">
-                            <label for="Total Amount">Total Amount</label>
-                            <input class="form-control"type="text" id="total_amount" placeholder="P 0.00">
+                            <label for="apiUsername">API Username</label>
+                            <input class="form-control"type="text" id="apiUsername" placeholder="API Username">
                         </div>
                             <div class="form-group col-md-12">
-                            <label for="Set on Hand">Set on Hand</label>
-                            <input type="text" class="form-control" id="set_onhand" placeholder="Set on Hand">
+                            <label for="marketplace">Marketplace</label>
+                            <input type="text" class="form-control" id="marketplace" placeholder="Marketplace">
                         </div>
                        <div class="form-group col-md-12">
-                            <label for="Name">Encoded By</label>
-                            <input type="text" class="form-control" id="encoded_by2" placeholder="Encoded By">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Name">
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="feed">Feed</label>
+                            <input type="text" class="form-control" id="feed" placeholder="Feed">
                         </div>
                         </div>
-                       <button type="button" class="btn btn-primary btn-rounded" style="float: right;" id="add_productset">Save</button>
+                       <button type="button" class="btn btn-primary btn-rounded" style="float: right;" id="addNewApiBtn">Save</button>
+                        <button type="button" class="btn btn-danger btn-rounded" style="float: right;margin-right: 1%" data-dismiss="modal">Cancel</button>
+                    </div>
+                    <!-- /.card-body -->
+                </form>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!--/end -->
+<!-- /add product set -->
+<div class="modal fade" id="add-ProductSet">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Add API</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form role="form">
+                    <div class="card-body">
+                        <div id="mgs_Api"></div>
+                        <div id="reqApi"></div>
+                        <div class="row">
+                        <div class="form-group col-md-12">
+                            <label for="Set Code">API URL</label>
+                            <input type="text" class="form-control" id="apiUrl" placeholder="API URL">
+                        </div>
+                            <div class="form-group col-md-12">
+                            <label for="Set Name">API Key</label>
+                            <input type="text" class="form-control" id="apiKey" placeholder="API KEY">
+                        </div>
+                            <div class="form-group col-md-12">
+                            <label for="Total Amount">API Username</label>
+                            <input class="form-control"type="text" id="apiUsername" placeholder="API Username">
+                        </div>
+                            <div class="form-group col-md-12">
+                            <label for="Set on Hand">Marketplace</label>
+                            <input type="text" class="form-control" id="marketplace" placeholder="Marketplace">
+                        </div>
+                       <div class="form-group col-md-12">
+                            <label for="Name">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Name">
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="Name">Feed</label>
+                            <input type="text" class="form-control" id="feed" placeholder="Name">
+                        </div>
+                        </div>
+                       <button type="button" class="btn btn-primary btn-rounded" style="float: right;" id="addNewApiBtn">Save</button>
                         <button type="button" class="btn btn-danger btn-rounded" style="float: right;margin-right: 1%" data-dismiss="modal">Cancel</button>
                     </div>
                     <!-- /.card-body -->
