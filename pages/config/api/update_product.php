@@ -10,6 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'PUT') {
 	$data = json_decode(file_get_contents("php://input", true)); 
 
     $item_code = mysqli_real_escape_string($dbConn, $data->item_code);
+	$product_img = mysqli_real_escape_string($dbConn, $data->product_img);
 	$full_name = mysqli_real_escape_string($dbConn, $data->full_name);
 	$units_id = mysqli_real_escape_string($dbConn, $data->units_id);
 	$category_id = mysqli_real_escape_string($dbConn, $data->category_id);
@@ -17,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'PUT') {
 	$stock_quantity = mysqli_real_escape_string($dbConn, $data->stock_quantity);
 	$encoded_by = mysqli_real_escape_string($dbConn, $data->encoded_by);
 
-	$sql = "UPDATE tbl_product SET item_code = '" . $item_code . "', full_name = '" . $full_name . "', units_id = '" . $units_id . "', category_id = '" . $category_id . "', sales_price = '" . $sales_price . "', stock_quantity = '" . $stock_quantity . "', encoded_by = '" . $encoded_by . "' WHERE product_id = " . $data->product_id;
+	$sql = "UPDATE tbl_product SET item_code = '" . $item_code . "', product_img = '" . $product_img . "', full_name = '" . $full_name . "', units_id = '" . $units_id . "', category_id = '" . $category_id . "', sales_price = '" . $sales_price . "', stock_quantity = '" . $stock_quantity . "', encoded_by = '" . $encoded_by . "' WHERE product_id = " . $data->product_id;
 	dbQuery($sql);
 }
 

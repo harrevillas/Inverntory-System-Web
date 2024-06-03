@@ -153,53 +153,67 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form role="form">
+                <form id="product_form" enctype="multipart/form-data">
                     <div class="card-body">
                         <div id="reqProd"></div>
                         <div id="mgs_prod"></div>
                         <div class="row">
-                            <div class="form-group col-md-4">
-                                <label for="Item Code">Product ID</label>
-                                <input type="text" class="form-control" id="item_code" placeholder="Item Code">
-                            </div>
                             <div class="form-group col-md-8">
                                 <label for="Name">Product Name</label>
                                 <input type="text" class="form-control" id="full_name" placeholder="Name">
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="Unit Name">Unit Name</label>
-                                <select class="form-control" id="units_id">
-                                </select>
+                                <select class="form-control" id="units_id"></select>
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="Category">Category</label>
-                                <select class="form-control" id="category_id"> 
-                                </select>
+                                <select class="form-control" id="category_id"></select>
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="Sales Price">Sales Price</label>
-                                <input class="form-control" type="text" name="currency-field" id="sales_price" >
+                                <input class="form-control" type="text" name="currency-field" id="sales_price">
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="Stock Quantity">Stock Quantity</label>
                                 <input type="text" class="form-control" id="stock_quantity" placeholder="Stock Quantity">
                             </div>
+                            <!-- Product Image Upload -->
+                            <div class="form-group col-md-12">
+                                <label for="Product Image">Product Image</label>
+                                <div class="input-group">
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="product_img" name="product_img" accept="image/*">
+                                        <label class="custom-file-label" for="product_img">Choose file</label>
+                                    </div>
+                                    <div class="input-group-append">
+                                        <span class="input-group-text" id="inputGroupFileAddon01">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-file-earmark" viewBox="0 0 16 16">
+                                                <path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5V2H4zm4 1a.5.5 0 0 1 .5.5V3h3.5a.5.5 0 0 1 .5.5V4H9V1z"/>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End of Product Image Upload -->
                         </div>
                     </div>
-                    <!-- Save button with checkmark SVG icon -->
-                    <button type="button" class="btn btn-primary btn-rounded" style="float: right;" id="add_product">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-check" viewBox="0 0 16 16">
-                            <path fill="#ffffff" d="M12.782 3.22a.75.75 0 0 1 1.06 1.06l-7.5 7.5a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06L5 10.189l6.72-6.72a.75.75 0 0 1 1.062-.002z"/>
-                        </svg>
-                        Save
-                    </button>
-                    <!-- Cancel button with "X" SVG icon -->
-                    <button type="button" class="btn btn-danger btn-rounded" style="float: right;margin-right: 1%" data-dismiss="modal">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-x" viewBox="0 0 16 16">
-                            <path fill="#ffffff" d="M4.354 4.354a.5.5 0 0 1 .708 0L8 7.293l3.938-3.939a.5.5 0 1 1 .708.708L8.707 8l3.937 3.938a.5.5 0 1 1-.708.708L8 8.707l-3.938 3.937a.5.5 0 1 1-.708-.708L7.293 8 3.354 4.062a.5.5 0 0 1 0-.708z"/>
-                        </svg>
-                        Cancel
-                    </button>
+                    <!-- Save and Cancel Buttons -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary btn-rounded" id="add_product">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-check" viewBox="0 0 16 16">
+                                <path fill="#ffffff" d="M12.782 3.22a.75.75 0 0 1 1.06 1.06l-7.5 7.5a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06L5 10.189l6.72-6.72a.75.75 0 0 1 1.062-.002z"/>
+                            </svg>
+                            Save
+                        </button>
+                        <button type="button" class="btn btn-danger btn-rounded" data-dismiss="modal">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-x" viewBox="0 0 16 16">
+                                <path fill="#ffffff" d="M4.354 4.354a.5.5 0 0 1 .708 0L8 7.293l3.938-3.939a.5.5 0 1 1 .708.708L8.707 8l3.937 3.938a.5.5 0 1 1-.708.708L7.293 8 3.354 4.062a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                            Cancel
+                        </button>
+                    </div>
+                    <!-- End of Save and Cancel Buttons -->
                 </form>
             </div>
         </div>
@@ -224,10 +238,7 @@
                         <div id="reqPdit"></div>
                         <div id="mgs_Pedit"></div>
                         <div class="row">
-                        <div class="form-group col-md-4">
-                            <label for="Item Code">Product ID</label>
-                            <input type="text" class="form-control" id="edit_itemcode" placeholder="Item Code">
-                        </div>
+                       
                         <div class="form-group col-md-8">
                             <label for="Name">Product Name</label>
                             <input type="text" class="form-control" id="edit_fullname" placeholder="Name">
@@ -295,7 +306,7 @@
                         <div class="row">
                         <div class="form-group col-md-12">
                             <label for="Name">Product Name</label>
-                            <input type="text" class="form-control" id="del_itemcode" placeholder="Company Name...">
+                            <input type="text" class="form-control" id="del_fullname" placeholder="Product Name...">
                         </div>
                         </div>
                         <input type="hidden" id="del_productid" name="">
@@ -326,7 +337,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">Add Unit</h4>
+                <h4 class="modal-title">Add Variant</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -372,7 +383,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">Edit Unit</h4>
+                <h4 class="modal-title">Edit Variant</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -417,7 +428,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">Delete Unit</h4>
+                <h4 class="modal-title">Delete Variant</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -753,16 +764,12 @@
                         <div id="mgs_Inv"></div>
                         <div class="row">
                         <div class="form-group col-md-12">
-                            <label for="Total Amount">Order ID</label>
-                            <input class="form-control"type="text" name="currency-field" id="order_id" placeholder="">
-                        </div>
-                        <div class="form-group col-md-12">
                             <label for="Total Amount">Product Name</label>
                             <input class="form-control"type="text" name="currency-field" id="product_name" placeholder="">
                         </div>
                         <div class="form-group col-md-12">
                             <label for="Total Amount">Product ID</label>
-                            <input class="form-control"type="text" name="currency-field" id="product" placeholder="">
+                            <input class="form-control"type="text" name="currency-field" id="product_id" placeholder="">
                         </div>
                             <div class="form-group col-md-12">
                             <label for="Discount Price">Customer Name</label>
@@ -949,6 +956,7 @@
                                 <label for="Item">Item</label>
                                 <select class="form-control" id="category_id6"></select>
                             </div>
+                            
                             <div class="form-group col-md-12">
                                 <label for="Sale Quantity">Sale Quantity</label>
                                 <input type="number" class="form-control" id="sale_quantity" placeholder="Sale Quantity">

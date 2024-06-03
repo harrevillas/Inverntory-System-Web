@@ -8,7 +8,7 @@
   $year = date('Y');
   $total=array();
   for ($month = 1; $month <= 12; $month ++){
-    $sql="SELECT SUM(total) AS total FROM tbl_sales WHERE MONTH(date_created)='$month' AND YEAR(date_created)='$year'";
+    $sql="SELECT SUM(total_amount) AS total FROM tbl_invoice WHERE MONTH(date_created)='$month' AND YEAR(date_created)='$year'";
     $query=$conn->query($sql);
     $row=$query->fetch_array();
 
@@ -32,7 +32,7 @@
   $ptotal=array(); // Initialize ptotals array
 
   for ($pmonth = 1; $pmonth <= 12; $pmonth ++){
-    $sql="SELECT SUM(total) AS ptotal FROM tbl_sales WHERE MONTH(date_created)='$pmonth' AND YEAR(date_created)='$pyear'";
+    $sql="SELECT SUM(total_amount) AS ptotal FROM tbl_invoice WHERE MONTH(date_created)='$pmonth' AND YEAR(date_created)='$pyear'";
     $pquery=$conn->query($sql);
     $prow=$pquery->fetch_array();
 

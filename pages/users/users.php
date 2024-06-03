@@ -34,8 +34,6 @@
                                                     <th>Username</th>
                                                     <th>Password</th>
                                                     <th>User Type</th>
-                                                    <th>Contact Number</th>
-                                                    <th>Address</th>
                                                     <th></th>
                                                 </tr>
                                             </thead>

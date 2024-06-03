@@ -160,9 +160,15 @@ $(document).ready(function() {
 
     $(document).delegate('#del_company', 'click', function(event) {
         event.preventDefault();
-
+    
+        // Show confirmation dialog
+        var confirmDelete = confirm("Are you sure you want to delete this company?");
+        if (!confirmDelete) {
+            return; // Cancel deletion if user chooses No
+        }
+    
         var company_id = $('#del_companyid').val();
-
+    
         $.ajax({
             type: "DELETE",
             contentType: "application/json; charset=utf-8",

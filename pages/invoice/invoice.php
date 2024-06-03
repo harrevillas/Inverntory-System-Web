@@ -22,6 +22,47 @@
               </div>
             </div>
           </div>
+
+           <!-- Sales Overview -->
+           <div class="row">
+            <div class="col-md-4 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-title text-md-center text-xl-left">Sales This Month</p>
+                  <div class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
+                    <h3 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0" id="count_salesthismonth"></h3>
+                    <i class="ti-calendar icon-md text-muted mb-0 mb-md-3 mb-xl-0"></i>
+                  </div>
+                  <p class="mb-0 mt-2 text-danger"><span class="text-black ml-1"><small>This Month</small></span></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-title text-md-center text-xl-left">Sales Last Month</p>
+                  <div class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
+                    <h3 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0" id="count_saleslastmonth"></h3>
+                    <i class="ti-calendar icon-md text-muted mb-0 mb-md-3 mb-xl-0"></i>
+                  </div>
+                  <p class="mb-0 mt-2 text-danger"><span class="text-black ml-1"><small>Last Month</small></span></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-title text-md-center text-xl-left">Sales This Year</p>
+                  <div class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
+                    <h3 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0" id="count_salesthisyear"></h3>
+                    <i class="ti-calendar icon-md text-muted mb-0 mb-md-3 mb-xl-0"></i>
+                  </div>
+                  <p class="mb-0 mt-2 text-danger"><span class="text-black ml-1"><small>This Year</small></span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div class="row">
             <div class="col-md-12 grid-margin stretch-card">
               <div class="card">
@@ -34,7 +75,7 @@
                                   <th>Order ID</th>
                                   <th>Product ID</th>
                                   <th>Product Name</th>
-                                  <th>Customer Name</th>
+                                  <th>Encoded By</th>
                                   <th>Total Amount</th>
                                   <th>Status</th>
                                   <th>Date Recorded</th>
@@ -50,13 +91,28 @@
             </div>
           </div>
         </div>
+        <div class="col-lg-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Sales This Year</h4>
+                  <div class="chart">
+                     <canvas id="areaChart" style="height:250px"></canvas>
+                 </div>
+                </div>
+              </div>
+          </div>
+        </div>
           <?php include '../modals.php'; ?>
-             <script type="text/javascript" src="../../js/custom/invoice.js"> </script>
           <?php include '../footer.php'; ?>
       </div>
     </div>
   </div>
-<?php include '../scripts.php'; ?>
+    <script src="../chart/Chart.js"></script>
+<!--   <script type="text/javascript" src="../../js/custom/chart_functionyearly.js"> </script> -->
+   <script type="text/javascript" src="../../js/custom/invoice.js"> </script>
+   <script type="text/javascript" src="../../js/custom/dashboard_count.js"> </script>
+   <?php include '../config/api/zchart_yearlyreports.php'; ?>
+   <?php include '../scripts.php'; ?>
 </body>
 </html>
-
+       

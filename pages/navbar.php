@@ -89,14 +89,14 @@
    <a class="nav-link" href="../dashboard/dashboard.php">
        <i class="ti-shield menu-icon" title="Dashboard"></i>
     </a> 
-    <a class="nav-link" href="../company/company.php">
+   <!-- <a class="nav-link" href="../company/company.php">
         <i class="ti-flag menu-icon" title="Supplier"></i>
-    </a>
+    </a> -->
     <a class="nav-link" href="../product/product.php">
         <i class="ti-shopping-cart menu-icon" title="Product"></i>
     </a>
     <a class="nav-link" href="../unit/unit.php">
-        <i class="ti-layers menu-icon" title="Unit"></i>
+        <i class="ti-layers menu-icon" title="Variant"></i>
     </a>
     <a class="nav-link" href="../category/category.php">
         <i class="ti-layers-alt menu-icon" title="Category"></i>
@@ -138,6 +138,7 @@
 </nav>
 
 <script>
+
   function updateCurrentDateTime() {
     var currentDate = new Date();
     var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };

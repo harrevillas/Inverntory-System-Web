@@ -8,11 +8,11 @@
                   </a>
               </li> 
               <li class="nav-item">
-              <a class="nav-link" href="../company/company.php">
+             <!-- <a class="nav-link" href="../company/company.php">
                       <i class="ti-flag menu-icon"></i>
                       <span class="menu-title">Supplier</span>
                   </a>
-              </li>
+              </li> -->
               <li class="nav-item">
                   <a class="nav-link" href="../product/product.php">
                       <i class="ti-shopping-cart menu-icon"></i>
@@ -22,7 +22,7 @@
               <li class="nav-item">
                   <a class="nav-link" href="../unit/unit.php">
                       <i class="ti-layers menu-icon"></i>
-                      <span class="menu-title">Units</span>
+                      <span class="menu-title">Variant</span>
                   </a>
               </li>
               <li class="nav-item">
@@ -57,12 +57,12 @@
                       <span class="menu-title">Users</span>
                   </a>
               </li> 
-               <li class="nav-item">
+            <!--   <li class="nav-item">
                   <a class="nav-link" href="../marketplace/marketplace.php">
                       <i class="ti-user menu-icon"></i>
                       <span class="menu-title">Marketplace</span>
                   </a>
-              </li> 
+              </li> -->
              <!-- <li class="nav-item">
                   <a class="nav-link" href="../auditlog/auditlog.php">
                       <i class="ti-time menu-icon"></i>

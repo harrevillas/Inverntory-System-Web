@@ -12,10 +12,8 @@ $(document).ready(function() {
           var username = $('#username').val();
           var password = $('#password').val();
           var usertype = $('#usertype').val();
-          var contact = $('#contact').val();
-          var address = $('#address').val();
           
-          if(f_name == "" || username == "" || password == "" || usertype == "" || contact == "" || address =="") {
+          if(f_name == "" || username == "" || password == "" || usertype == "") {
             $('#reqUsers').html("<div class='alert alert-danger'>All fields are required</div>");
             return;
           } 
@@ -24,7 +22,7 @@ $(document).ready(function() {
             type: "POST",
             contentType: "application/json; charset=utf-8",
             url: api+"create_users.php",
-            data: JSON.stringify({'f_name': f_name, 'username': username, 'password': password, 'usertype': usertype, 'contact': contact, 'address': address}),
+            data: JSON.stringify({'f_name': f_name, 'username': username, 'password': password, 'usertype': usertype}),
             cache: false,
             success: function(result) {
               $('#mgs_users').html('<div class="alert alert-success">User added successfully</div>');
@@ -61,8 +59,6 @@ $(document).ready(function() {
           obj['username'] = json[i].username;
           obj['password'] = json[i].password;
           obj['usertype'] = json[i].usertype;
-          obj['contact'] = json[i].contact;
-          obj['address'] = json[i].address;
           obj['actions'] = btnEdit + " " + btnDelete;
 
           arr.push(obj);
@@ -80,10 +76,6 @@ $(document).ready(function() {
               }, {
                   "data": "usertype"
               }, {
-                  "data": "contact"
-              }, {
-                  "data": "address"
-              },{
                   "data": "actions"
               }]
 
@@ -96,7 +88,6 @@ $(document).ready(function() {
     ///////////////////////////////////end fetch data///////////////////////////////
     
     //////////////////////////////////edit get Id ////////////////////////////////////////
-
    $(document).on("click", ".btn-rounded", function() {
         var user_id = $(this).data("edit");
         getID(user_id);//argument
@@ -115,9 +106,6 @@ $(document).ready(function() {
                 $('#edit_username').val(response.username);
                 $('#edit_password').val(response.password);
                 $('#edit_usertype').val(response.usertype);
-                $('#edit_contact').val(response.contact);
-                $('#edit_address').val(response.address);
-
              }
           });
          }
@@ -137,8 +125,6 @@ $(document).ready(function() {
            var username = $('#edit_username').val();
            var password = $('#edit_password').val();
            var usertype = $('#edit_usertype').val();
-           var contact = $('#edit_contact').val();
-           var address = $('#edit_address').val();
            var user_id = $('#edit_userid').val();
 
           if(username == "") {
@@ -150,7 +136,7 @@ $(document).ready(function() {
             type: "PUT",
             contentType: "application/json; charset=utf-8",
             url: api+"update_users.php",
-            data: JSON.stringify({'user_id': user_id, 'f_name': f_name, 'username': username, 'password': password, 'usertype': usertype, 'contact': contact, 'address': address}),
+            data: JSON.stringify({'user_id': user_id, 'f_name': f_name, 'username': username, 'password': password, 'usertype': usertype }),
             cache: false,
             success: function(result) {
               $('#mgs_users1').html('<div class="alert alert-success">User Updated successfully</div>');

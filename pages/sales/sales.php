@@ -71,8 +71,7 @@
                       <table class="table table-hover" id="table_sales">
                           <thead style="font-size:10px">
                               <tr>
-                      <!--             <th>Order ID</th> -->
-                                  <th>Item</th>
+                                  <th>Category</th>
                                   <th>Sale Quantity</th>
                                   <th>Total</th>
                                   <th>Recorded By</th>

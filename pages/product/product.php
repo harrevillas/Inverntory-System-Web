@@ -21,6 +21,8 @@
               </div>
             </div>
           </div>
+          
+          <!-- Existing Product Section -->
           <div class="row">
             <div class="col-md-12 grid-margin stretch-card">
               <div class="card">
@@ -31,11 +33,10 @@
                        <table  class="table table-hover" id="table_product">
                           <thead style="font-size:10px">
                               <tr>
-                                
-                                  <th>Product ID</th>
+                                  <th>Product ID </th>
+                                  <th>Category</th>
                                   <th>Product Name</th>
                                   <th>Unit Name</th>
-                                  <th>Category</th>
                                   <th>Sales Price</th>
                                   <th>Stocks Quantity</th>
                                   <th></th>
@@ -49,66 +50,91 @@
                 </div>
               </div>
             </div>
+          </div>
+
+          <!-- New Low Stock Items Section -->
+          <div class="row">
+            <div class="col-md-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-title text-md-center text-xl-left">Low Stock Items</p>
+                  <div class=" flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
+                      <table class="table table-hover" id="table_productlowstock">
+                          <thead style="font-size:10px">
+                              <tr>
+                                  <th>Product Code</th>
+                                  <th>Product Name</th>
+                                  <th>Stock Item</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                         </tbody>
+                      </table>
+                  </div>  
+                </div>
+              </div>
             </div>
           </div>
+
         </div>
-          <?php include '../modals.php'; ?>
-              <script type="text/javascript" src="../../js/custom/product.js"> </script>
-          <?php include '../footer.php'; ?>
+        
+        <?php include '../modals.php'; ?>
+        <script type="text/javascript" src="../../js/custom/product.js"></script>
+        <?php include '../footer.php'; ?>
+      </div>
     </div>
-</div>
-</div> 
-<?php include '../scripts.php'; ?>
-          <button id="backToTopBtn" class="btn btn-primary back-to-top-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path fill="none" d="M0 0h24v24H0z"/>
-              <path d="M12 2L0 12h5v10h14v-10h5L12 2zm6 17h-4v-4h-4v4H6l6-6 6 6z"/>
-            </svg>
-            <span>Back to Top</span>
-          </button>
-<style>
-/* CSS to position the back to top button */
-.back-to-top-btn {
-    position: fixed;
-    bottom: 20px; /* Adjust as needed */
-    right: 20px; /* Adjust as needed */
-    z-index: 1000; /* Ensure button is above other content */
-}
+  </div> 
+  <?php include '../scripts.php'; ?>
+  <button id="backToTopBtn" class="btn btn-primary back-to-top-btn">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+      <path fill="none" d="M0 0h24v24H0z"/>
+      <path d="M12 2L0 12h5v10h14v-10h5L12 2zm6 17h-4v-4h-4v4H6l6-6 6 6z"/>
+    </svg>
+    <span>Back to Top</span>
+  </button>
+  <style>
+    /* CSS to position the back to top button */
+    .back-to-top-btn {
+        position: fixed;
+        bottom: 20px; /* Adjust as needed */
+        right: 20px; /* Adjust as needed */
+        z-index: 1000; /* Ensure button is above other content */
+    }
 
-/* Style the arrow icon */
-.back-to-top-btn svg {
-    fill: white; /* Change the color as needed */
-    width: 24px; /* Adjust size as needed */
-    height: 24px; /* Adjust size as needed */
-    margin-right: 5px; /* Adjust spacing between icon and text */
-}
+    /* Style the arrow icon */
+    .back-to-top-btn svg {
+        fill: white; /* Change the color as needed */
+        width: 24px; /* Adjust size as needed */
+        height: 24px; /* Adjust size as needed */
+        margin-right: 5px; /* Adjust spacing between icon and text */
+    }
 
-/* Hide the text */
-.back-to-top-btn span {
-    display: inline-block;
-}
-</style>
-<script>
-// JavaScript to handle back to top button functionality
-document.addEventListener("DOMContentLoaded", function() {
-    var backToTopBtn = document.getElementById('backToTopBtn');
-    
-    // Function to handle scrolling and showing/hiding back to top button
-    window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 100) {
-            // Show back to top button
-            backToTopBtn.style.display = 'block';
-        } else {
-            // Hide back to top button
-            backToTopBtn.style.display = 'none';
-        }
+    /* Hide the text */
+    .back-to-top-btn span {
+        display: inline-block;
+    }
+  </style>
+  <script>
+    // JavaScript to handle back to top button functionality
+    document.addEventListener("DOMContentLoaded", function() {
+        var backToTopBtn = document.getElementById('backToTopBtn');
+        
+        // Function to handle scrolling and showing/hiding back to top button
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 100) {
+                // Show back to top button
+                backToTopBtn.style.display = 'block';
+            } else {
+                // Hide back to top button
+                backToTopBtn.style.display = 'none';
+            }
+        });
+
+        // Functionality to scroll back to top when back to top button is clicked
+        backToTopBtn.addEventListener('click', function() {
+            window.scrollTo(0, 0);
+        });
     });
-
-    // Functionality to scroll back to top when back to top button is clicked
-    backToTopBtn.addEventListener('click', function() {
-        window.scrollTo(0, 0);
-    });
-});
-</script>
+  </script>
 </body>
 </html>
